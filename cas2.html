@@ -98,6 +98,84 @@ body {
 		width: 95%;
 	}
 }
+
+
+
+.modal1{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modal1{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+}
+#btn-modal1:checked ~ .modal1{
+	opacity: 1;
+	visibility: visible;
+} 
+.contenedor1{
+	width: 40%;
+	height: 50%;
+	margin: auto;
+	background: #fff;
+	box-shadow: 1px 7px 25px rgba(0,0,0,0.6);
+	transition: all 500ms ease;
+	position: relative;
+    justify-content: center;
+	align-items: center;
+	transform: translateY(-30%);
+}
+#btn-modal1:checked ~ .modal .contenedor1{
+	transform: translateY(0%);
+} 
+.contenedor1 header{
+	padding: 10px;
+	background: #7499ff;
+	color: #fff;
+}
+.contenedor1 label{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+}
+.contenido1{
+	width: 100%;
+	padding: 10px; 
+}
+.contenido1 h3{
+	margin-bottom: 10px;
+}
+.contenido1 img{
+	justify-content: center;
+	align-items: center;
+}
+#btn-modal1{
+	display: none;
+}
+.lbl-modal1{
+	background: #fff;
+	padding: 10px 15px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+	.contenedor1{
+		width: 95%;
+	}
+}
+
+
     
     
         .viewer{
@@ -131,6 +209,27 @@ body {
                             <h5 class="card-title"> </h5>
                             <img src="qr2.png" alt="" style="width:65%; height:70%; align-items: center; margin-left:15%">
                             
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <input type="checkbox" id="btn-modal1">
+                      <label for="btn-modal1" class="lbl-modal1" >Requisitos RA</label>
+                      <div class="modal1">
+                        <div class="contenedor1">
+                          <header>Requisitos</header>
+                          <label for="btn-modal1">X</label>
+                          <div class="contenido1">
+                            <h5 class="card-title1"> </h5>
+                            <center><h1 style="font-size:12px;">Presione el ícono para descargar la app desde la playstore</h1></center>
+                            <br><br>
+                             <a href="https://play.google.com/store/apps/details?id=com.google.ar.core&hl=es-419"><img src="https://play-lh.googleusercontent.com/ugEBVDcghA1x9fVldH8oz3aEQnMLki0pEc5xfpaZTi9SQGEbQqM-Cbzb60MU4fLM9bIv" alt="" style="width:20%; height:25%; margin-left:40%"></a>
+                             <br><br>
+                             <center><h1 style="font-size:12px;">Si no pudo descargar revise la siguiente página de dispositivos aceptados</h1></center>
+                            <br><br>
+                            <center><a href="https://developers.google.com/ar/devices">Equipos Aceptados</a></center>
+                            <br><br>
                           </div>
                         </div>
                       </div>
